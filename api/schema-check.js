@@ -1,5 +1,5 @@
 const {needCheckPropery} = require('./api.config')
-const {isEmpty} = require('../utils/util');
+const {isEmpty} = require('../utils/index');
 const {needCheckProperty} = require('./api.config');
 
 const apiDefCheck = function (apiDef = {}) {
