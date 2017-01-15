@@ -1,12 +1,17 @@
 //app.js
 const promisifyAPI = require('./wxapi-to-promise/index');
 const globalData = require('./runtime/global-data');
+const PageProxy = require('./runtime/pageProxy');
 
 App({
   globalData,
   onLaunch: function () {
     // init promisified api
     promisifyAPI();
+
+    // proxy Page
+    wx.Page = Page;
+    Page = PageProxy;
 
     //调用API从本地缓存中获取数据
     var logs = wx.getStorageSync('logs') || []
