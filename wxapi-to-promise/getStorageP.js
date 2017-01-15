@@ -1,4 +1,4 @@
-const debug = require('./utils/index').debug('getStorage');
+const debug = require('../utils/index').debug('getStorage');
 
 const getStorageP = function (key) {
     if ('string' !== typeof key || !key) {
