@@ -1,4 +1,4 @@
-const pageCommon = require('./pageCommon');
+const pageCommon = require('./page-common');
 const {merge} = require('../utils/index');
 const onFns = ['onLoad','onReady','onShow','onHide','onUnload','onPullDownRefresh','onReachBottom'];
 const PageConfig = {}

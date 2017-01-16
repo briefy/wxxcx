@@ -11,7 +11,7 @@ const IFsDesc =[
 ];
 
 module.exports = {
-    IFsDes,
+    IFsDesc,
 
     // only properties below required，do NOT modify this property
     needCheckPropery:['url','method']
