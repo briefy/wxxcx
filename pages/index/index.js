@@ -1,5 +1,5 @@
 //index.js
-//获取应用实例
+const debug = require('../../utils/index').debug('page/index');
 var app = getApp()
 Page({
   data: {
@@ -13,7 +13,7 @@ Page({
     })
   },
   onLoad: function () {
-    console.log('onLoad')
+    debug('onLoad');
     var that = this
     //调用应用实例的方法获取全局数据
     app.getUserInfo(function(userInfo){
