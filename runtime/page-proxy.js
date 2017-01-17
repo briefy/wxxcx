@@ -2,7 +2,6 @@ const pageCommon = require('./page-common');
 const {merge} = require('../utils/index');
 const onFns = ['onLoad', 'onReady', 'onShow', 'onHide', 'onUnload', 'onPullDownRefresh', 'onReachBottom'];
 
-
 const PageProxy = function (config) {
   const pageConfig = merge(pageConfig, pageCommon, config);
   onFns.forEach(onFn => {
@@ -17,3 +16,4 @@ const PageProxy = function (config) {
 }
 
  module.exports= PageProxy;
+ 

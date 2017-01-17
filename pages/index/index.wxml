@@ -1,15 +1,10 @@
-
 <!--index.wxml-->
-<meta name="viewport" content="width:500" />
-<view class="container" wx:if="{{true}}">
-  <view bindtap="bindViewTap" class="userinfo">
+<view class="container">
+  <view  bindtap="bindViewTap" class="userinfo">
     <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
     <text class="userinfo-nickname">{{userInfo.nickName}}</text>
   </view>
-  <block>
-    <view class="usermotto">
-      <text class="user-motto">{{motto}}</text>
-    </view>
-  </block>
-  <progress percent="{{p}}" show-info stroke-width="12" color="#000000"/>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
 </view>

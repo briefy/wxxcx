@@ -2,8 +2,8 @@ const {env} = require('../global.config');
 
 const debug = function (name) {
     return function (info) {
-        'development' === env ? (function(){
-            console.error(`---->${name}<----`);
+        'develepment' === env ? (function(){
+            console.log(`---->${name}<----`);
             console.log(info);
         })() : null;
     }
