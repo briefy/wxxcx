@@ -1,0 +1,22 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "https based nodejs server",
+  "main": "index.js",
+  "dependencies": {
+    "debug": "^2.6.0",
+    "koa": "^1.2.4",
+    "lodash": "^4.17.4",
+    "ramda": "^0.23.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "https",
+    "koa"
+  ],
+  "author": "briefy",
+  "license": "MIT"
+}
