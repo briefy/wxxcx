@@ -58,7 +58,7 @@ IFsDesc.forEach((api) => {
     };
 
     // name the api 
-    IF[apiName]['name'] = apiName;
+    // IF[apiName]['name'] = apiName;
 
     // init api success callback
     IFSuccessCallback[apiName] = [];

@@ -1,4 +1,4 @@
-module.exports = {
+const pageCommon = {
   data:{},
   onLoad:function(){
 
@@ -12,4 +12,6 @@ module.exports = {
   onPUllDownRefresh: function(){},
   onReachBottom: function(){},
   onShareAppMessage: function(){}
-}
+};
+
+module.exports = pageCommon;

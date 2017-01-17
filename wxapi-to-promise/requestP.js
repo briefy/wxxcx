@@ -49,7 +49,7 @@ const requestP = function (option = {}) {
              *   message
              * }
              */
-            console.error('api retruned ERROR: %s:%s',err.code,err.message);
+            // console.error('api retruned ERROR: %s:%s',err.code,err.message);
         })
 }
 

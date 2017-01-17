@@ -1,7 +1,8 @@
 //app.js
 const promisifyAPI = require('./wxapi-to-promise/index');
 const globalData = require('./runtime/global-data');
-const PageProxy = require('./runtime/page-proxy');
+const IF = require('./api/index');
+let PageProxy = require('./runtime/page-proxy');
 
 App({
   globalData,

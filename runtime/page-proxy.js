@@ -1,22 +1,19 @@
 const pageCommon = require('./page-common');
 const {merge} = require('../utils/index');
-const onFns = ['onLoad','onReady','onShow','onHide','onUnload','onPullDownRefresh','onReachBottom'];
-const PageConfig = {}
+const onFns = ['onLoad', 'onReady', 'onShow', 'onHide', 'onUnload', 'onPullDownRefresh', 'onReachBottom'];
 
-wx.Page = Page || function(){
-  console.error('There is no Page call');
-};
 
-PageProxy = function(config){
-    PageConfig = merge(PageConfig,PageCommon,config);
-    onFns.forEach(onFn=>{
-      pageConfig[onFn] = function(){
-        pageCommon[onFn]();
-        config[onFn]();
-      };
-    });
+const PageProxy = function (config) {
+  const pageConfig = merge(pageConfig, pageCommon, config);
+  onFns.forEach(onFn => {
+    pageConfig[onFn] = function () {
+      // this should be bound
+      pageCommon[onFn].call(this);
+      config[onFn] && config[onFn].call(this);
+    };
+  });
 
-    wx.Page(pageConfig);
+  wx.Page(pageConfig);
 }
 
-module.exports = PageProxy;
+ module.exports= PageProxy;

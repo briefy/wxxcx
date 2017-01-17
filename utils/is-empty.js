@@ -8,7 +8,7 @@ const isEmpty = function(obj){
     return true;
   }else if(Object.prototype.toString(obj) === '[object Object]'){
     // WARN: only deal with plain object now
-    return JSON.stringify(oby) === '{}';
+    return JSON.stringify(obj) === '{}';
   }
 };
 
